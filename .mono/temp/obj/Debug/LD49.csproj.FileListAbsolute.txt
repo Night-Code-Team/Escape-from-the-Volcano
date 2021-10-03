@@ -15,3 +15,12 @@ G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfo.cs
 G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.csproj.CoreCompileInputs.cache
 G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.dll
 G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.pdb
+D:\LD49\LD49\.mono\temp\bin\Debug\LD49.dll
+D:\LD49\LD49\.mono\temp\bin\Debug\LD49.pdb
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.csproj.AssemblyReference.cache
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.GeneratedMSBuildEditorConfig.editorconfig
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfoInputs.cache
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfo.cs
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.csproj.CoreCompileInputs.cache
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.dll
+D:\LD49\LD49\.mono\temp\obj\Debug\LD49.pdb

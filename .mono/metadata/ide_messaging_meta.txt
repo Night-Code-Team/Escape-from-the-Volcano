@@ -1,2 +1,2 @@
-﻿52373
-G:/prog/Godot/Godot_v3.3.3-stable_mono_win64.exe
+﻿51830
+D:/Godot_v3.3.3-stable_mono_win64/Godot_v3.3.3-stable_mono_win64.exe

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Rdta3VumGH6Mf/HeOtqhNiCb8a53+bPjQDw/nAfzy7b/ofjcv3vmsTX0NndiB/hoofvrVfn3Jjx8R6LYRPtFEg==",
+  "dgSpecHash": "cdxx3Fp6EsDH1puHR43dGO34ss1bI/j4uJMgFT129XCUJZjtQsVlnz9j8xoWlx098WofqOP4NEW1J8cyNVSPlw==",
   "success": true,
-  "projectFilePath": "G:\\work\\CODING\\_Projects\\LD49\\LD49.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\LD49\\LD49\\LD49.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aless\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\aless\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
