@@ -1,8 +1,8 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://scripts/Car.cs" type="Script" id=1]
-[ext_resource path="res://Assets/meshes/car1.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Assets/textures/car1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/textures/car_1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/textures/car_1_light.png" type="Texture" id=3]
 [ext_resource path="res://scripts/MainScene.cs" type="Script" id=4]
 [ext_resource path="res://Assets/meshes/forest.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://Assets/meshes/grass_hole_1.obj" type="ArrayMesh" id=6]
@@ -33,57 +33,90 @@
 [ext_resource path="res://Assets/meshes/grass_house_1_light.obj" type="ArrayMesh" id=31]
 [ext_resource path="res://Assets/meshes/road_1_lava_1_light.obj" type="ArrayMesh" id=32]
 [ext_resource path="res://Assets/meshes/road_1_stone_1_light.obj" type="ArrayMesh" id=33]
+[ext_resource path="res://Assets/meshes/car_1.obj" type="ArrayMesh" id=34]
+[ext_resource path="res://Assets/meshes/car_1_light.obj" type="ArrayMesh" id=35]
+[ext_resource path="res://Assets/textures/meteor.png" type="Texture" id=36]
+[ext_resource path="res://scene/Tiles_road/road_1.tscn" type="PackedScene" id=37]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.445763, 0.338564, 0.806523 )
+extents = Vector3( 0.324087, 0.326762, 0.666148 )
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 1, 1, 1, 0 )
-albedo_texture = ExtResource( 3 )
+albedo_texture = ExtResource( 2 )
+metallic = 0.37
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+emission_enabled = true
+emission = Color( 1, 1, 1, 1 )
+emission_energy = 1.0
+emission_operator = 1
+emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
+
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.127834, 0.13345, 0.191509 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.0639769, 0.608896, 0.0835978 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 3.15834, 1, 0.126946 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.821773, 0.43264, 0.942888 )
 
-[sub_resource type="BoxShape" id=12]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.519744, 0.388283, 0.575996 )
 
-[sub_resource type="BoxShape" id=13]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 0.688754, 0.625428, 1 )
 
-[sub_resource type="BoxShape" id=14]
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 0.799028, 0.4974, 1.06063 )
 
-[sub_resource type="BoxShape" id=15]
+[sub_resource type="BoxShape" id=11]
 extents = Vector3( 0.60606, 0.777775, 0.662935 )
 
-[sub_resource type="BoxShape" id=16]
+[sub_resource type="BoxShape" id=12]
 extents = Vector3( 0.523482, 0.677113, 0.564034 )
 
-[sub_resource type="BoxShape" id=17]
+[sub_resource type="BoxShape" id=13]
 extents = Vector3( 0.853659, 0.356626, 0.829372 )
 
-[sub_resource type="BoxShape" id=18]
+[sub_resource type="BoxShape" id=14]
 extents = Vector3( 0.424845, 0.59839, 0.392215 )
 
-[sub_resource type="ProceduralSky" id=10]
-sun_color = Color( 0.996078, 0.827451, 0.0509804, 0.572549 )
+[sub_resource type="SpatialMaterial" id=15]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_billboard_mode = 1
+albedo_texture = ExtResource( 36 )
 
-[sub_resource type="Environment" id=11]
-background_mode = 3
-background_sky = SubResource( 10 )
-background_color = Color( 0.0392157, 0.0313726, 0.0235294, 0.254902 )
-background_energy = 0.0
-ambient_light_color = Color( 0.545098, 0.545098, 0.545098, 0.552941 )
-ambient_light_energy = 0.35
+[sub_resource type="QuadMesh" id=16]
+material = SubResource( 15 )
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0.0134228, 0.100671, 0.208054, 0.375839, 0.691275 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.9375, 0, 1, 1, 0, 0, 1, 0.3125, 0.3125, 0.3125, 1, 0.0664063, 0.0664063, 0.0664063, 1 )
+
+[sub_resource type="ProceduralSky" id=18]
+sky_top_color = Color( 0.54, 0.24867, 0.0918, 1 )
+sky_horizon_color = Color( 0, 0.133, 0.42, 1 )
+sky_curve = 0.146205
+ground_bottom_color = Color( 0.103247, 0.17, 0.0646, 1 )
+ground_horizon_color = Color( 0.05754, 0.14, 0.0098, 1 )
+texture_size = 0
+
+[sub_resource type="Environment" id=19]
+background_mode = 2
+background_sky = SubResource( 18 )
+background_color = Color( 0, 0.239216, 0.760784, 0.254902 )
+background_energy = 0.33
+ambient_light_color = Color( 1, 1, 1, 0 )
+ambient_light_energy = 0.02
 ambient_light_sky_contribution = 0.0
 fog_color = Color( 0.364706, 0.384314, 0.411765, 1 )
 fog_sun_color = Color( 0, 0, 0, 1 )
@@ -100,16 +133,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0448332, -42.5227 )
 script = ExtResource( 1 )
 
 [node name="Collider" type="CollisionShape" parent="Car"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0460751, 0.33588, 0.0201618 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0460751, 0.342516, 0.0201607 )
 shape = SubResource( 1 )
 
-[node name="mesh" type="MeshInstance" parent="Car/Collider"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0460751, -0.33588, -0.0201618 )
-mesh = ExtResource( 2 )
+[node name="car_1" type="MeshInstance" parent="Car/Collider"]
+transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 1.18464e-06, -0.336493, -0.0495033 )
+mesh = ExtResource( 34 )
 material/0 = SubResource( 2 )
 
-[node name="SpotLight" type="SpotLight" parent="Car/Collider/mesh"]
-transform = Transform( -1, 0, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, -0.243835, 0.275597, 0.927276 )
+[node name="car_1_light" type="MeshInstance" parent="Car/Collider/car_1"]
+mesh = ExtResource( 35 )
+material/0 = SubResource( 3 )
+
+[node name="SpotLight" type="SpotLight" parent="Car/Collider/car_1"]
+transform = Transform( 1.28155e-06, 2.58819, -9.65926, -2.26267e-07, 9.65926, 2.58819, 10, -1.13133e-07, 1.29645e-06, 7.71689, 4.39717, 1.15573 )
 light_color = Color( 0.713726, 0.988235, 1, 1 )
 light_energy = 1.69
 light_indirect_energy = 0.0
@@ -117,8 +154,8 @@ spot_range = 4.0
 spot_attenuation = 0.366021
 spot_angle = 29.8942
 
-[node name="SpotLight2" type="SpotLight" parent="Car/Collider/mesh"]
-transform = Transform( -1, 2.26267e-08, -8.9407e-08, -3.69322e-09, 0.958835, 0.283965, 9.21517e-08, 0.283965, -0.958835, 0.129212, 0.290881, 0.852926 )
+[node name="SpotLight2" type="SpotLight" parent="Car/Collider/car_1"]
+transform = Transform( 1.35863e-06, 2.83965, -9.58835, -3.69322e-08, 9.58835, 2.83965, 10, -3.50392e-07, 1.31319e-06, 7.58685, 4.55001, -1.60789 )
 light_color = Color( 0.713726, 0.988235, 1, 1 )
 light_energy = 1.69
 light_indirect_energy = 0.0
@@ -126,14 +163,14 @@ spot_range = 4.0
 spot_attenuation = 0.366021
 spot_angle = 29.8942
 
-[node name="OmniLight" type="OmniLight" parent="Car/Collider/mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151742, 0.26042, -0.712574 )
+[node name="OmniLight" type="OmniLight" parent="Car/Collider/car_1"]
+transform = Transform( -4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, -7.32736, 4.2454, -2.77396 )
 light_color = Color( 0.792157, 0, 0, 1 )
 light_energy = 4.56
 omni_range = 0.282162
 
-[node name="OmniLight2" type="OmniLight" parent="Car/Collider/mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25212, 0.26042, -0.712574 )
+[node name="OmniLight2" type="OmniLight" parent="Car/Collider/car_1"]
+transform = Transform( -4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, -7.32736, 4.2454, 2.70953 )
 light_color = Color( 0.792157, 0, 0, 1 )
 light_energy = 4.56
 omni_range = 0.282162
@@ -143,7 +180,7 @@ transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -4, 5, -45.
 script = ExtResource( 11 )
 
 [node name="CollisionShape" type="CollisionShape" parent="MainCamera"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Camera" type="Camera" parent="MainCamera/CollisionShape"]
 transform = Transform( 0, 0.707107, -0.707107, 3.09086e-08, 0.707107, 0.707107, 1, -2.98023e-08, -2.98023e-08, 0, -0.5, 0 )
@@ -187,15 +224,15 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
@@ -213,19 +250,19 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8882, 1.22096, 1.20969 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1_hole_1/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
@@ -243,27 +280,27 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.698924, 1.0668, 0.00574017 )
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107311, 1.01892, -0.430504 )
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.890457, 1.05604, -1.55311 )
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1_hole_2/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
@@ -281,23 +318,23 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.97316, 1.24627, -1.48994 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24478, 0.855521, 1.02589 )
-shape = SubResource( 14 )
+shape = SubResource( 10 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1_hole_3/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
@@ -319,23 +356,23 @@ material/0 = ExtResource( 28 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45786, 0.855833, -0.477167 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914648, 0.939913, 0.311308 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1_lava_1/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
@@ -357,19 +394,19 @@ material/0 = ExtResource( 28 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_stone_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_stone_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_stone_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_1_stone_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13327, 1.15037, 1.00686 )
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_1_stone_1/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350194 )
@@ -394,15 +431,15 @@ spot_angle = 31.8174
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="road_1_crack_2" type="MeshInstance" parent="Tiles_Road"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 47.25 )
@@ -420,15 +457,15 @@ spot_angle = 31.8174
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_1_crack_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_1_crack_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_1_crack_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="road_2" type="MeshInstance" parent="Tiles_Road"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 54 )
@@ -439,15 +476,15 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="SpotLight2" type="SpotLight" parent="Tiles_Road/road_2/border"]
 transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
@@ -472,15 +509,15 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_2_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_2_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_2_crack_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="SpotLight2" type="SpotLight" parent="Tiles_Road/road_2_crack_1/border"]
 transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
@@ -505,15 +542,15 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_2_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_2_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_2_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="SpotLight2" type="SpotLight" parent="Tiles_Road/road_2_hole_1/border"]
 transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
@@ -531,7 +568,7 @@ spot_angle = 31.8174
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_2_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5456, 0.923611, -1.40548 )
-shape = SubResource( 17 )
+shape = SubResource( 13 )
 
 [node name="road_2_hole_2" type="MeshInstance" parent="Tiles_Road"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 74.25 )
@@ -542,15 +579,15 @@ material/0 = ExtResource( 12 )
 
 [node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="SpotLight2" type="SpotLight" parent="Tiles_Road/road_2_hole_2/border"]
 transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
@@ -568,27 +605,27 @@ spot_angle = 31.8174
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23246, 1.06352, 1.72066 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16869, -2.38419e-07, -1.52512 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60147, 0, -0.920958 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75956, 0, -0.437803 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86355, -2.38419e-07, -1.91646 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="Tiles_Road/road_2_hole_2/border/CollisionShape"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5761, -2.38419e-07, -2.54847 )
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 
 [node name="road_3" type="MeshInstance" parent="Tiles_Road"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 81 )
@@ -621,46 +658,88 @@ material/0 = ExtResource( 12 )
 mesh = ExtResource( 30 )
 material/0 = ExtResource( 28 )
 
+[node name="volcano_light" type="OmniLight" parent="Main_world/volcano/vulcano_Light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0 )
+light_color = Color( 1, 0.607843, 0, 1 )
+light_energy = 3.26
+light_indirect_energy = 0.0
+shadow_enabled = true
+omni_range = 16.25
+omni_attenuation = 1.93188
+
+[node name="lava_lake" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, -5.25, 9.5 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 3.0
+
+[node name="lava_lake2" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -5.5, 5.75 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 2.25
+
+[node name="lava_lake3" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.25, -5.5, -2.5 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 1.5
+
+[node name="lava_lake4" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, -5.25, -9.75 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 2.75
+
+[node name="lava_lake5" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -4.75, -10.75 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 2.5
+
+[node name="lava_lake6" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -4.75, 6 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 2.5
+
+[node name="lava_lake7" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, -5.5, -9.25 )
+light_color = Color( 1, 0.678431, 0, 1 )
+light_energy = 2.78
+shadow_enabled = true
+omni_range = 2.5
+
+[node name="smoke" type="CPUParticles" parent="Main_world/volcano"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, 0 )
+amount = 20
+lifetime = 3.0
+mesh = SubResource( 16 )
+emission_shape = 2
+emission_box_extents = Vector3( 0.5, 1.5, 0.5 )
+direction = Vector3( 0, 0, 0 )
+spread = 8.23
+gravity = Vector3( 0, 1, 0 )
+color_ramp = SubResource( 17 )
+hue_variation = 0.04
+
 [node name="forest" type="MeshInstance" parent="Main_world"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -25.6011 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest2" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -76.7688 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest3" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.5891, 0, -51.1743 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest4" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.6031, 0, -51.1743 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest5" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.472, 0, -76.7688 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest6" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.624, 0, -76.7688 )
-mesh = ExtResource( 5 )
-material/0 = ExtResource( 12 )
-
-[node name="forest7" type="MeshInstance" parent="Main_world"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.624, 0, -25.5546 )
+visible = false
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 12 )
 
 [node name="Camera" type="Camera" parent="Main_world"]
-transform = Transform( 0.704969, 0.49513, -0.507804, 0, 0.715985, 0.698115, 0.709239, -0.492149, 0.504747, -11.3504, 12.9836, -40.4072 )
+transform = Transform( 0.702245, 0.555259, -0.445578, 0.000615589, 0.625395, 0.780309, 0.711936, -0.548242, 0.438838, -10.8504, 13.2336, -39.6572 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 11 )
+environment = SubResource( 19 )
 
 [node name="test" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.5217 )
@@ -681,15 +760,15 @@ spot_angle = 31.8174
 
 [node name="road_light_collition" type="CollisionShape" parent="test/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="test/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="test/road_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="road_2" type="MeshInstance" parent="test"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.75, 6.39228 )
@@ -707,15 +786,15 @@ spot_angle = 31.8174
 
 [node name="road_light_collition" type="CollisionShape" parent="test/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="test/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="test/road_2/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="road_1_hole_1" type="MeshInstance" parent="test"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.75, 12.75 )
@@ -733,16 +812,19 @@ spot_angle = 31.8174
 
 [node name="road_light_collition" type="CollisionShape" parent="test/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="wall_1" type="CollisionShape" parent="test/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="wall_2" type="CollisionShape" parent="test/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="test/road_1_hole_1/border"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8882, 1.22096, 1.20969 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
+
+[node name="Spatial" parent="test" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.0217 )
