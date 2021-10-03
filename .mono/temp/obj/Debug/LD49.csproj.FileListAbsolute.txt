@@ -1,0 +1,9 @@
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\bin\Debug\LD49.dll
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\bin\Debug\LD49.pdb
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.csproj.AssemblyReference.cache
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfoInputs.cache
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfo.cs
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.dll
+C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.pdb
