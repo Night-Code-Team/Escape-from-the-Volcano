@@ -51,33 +51,9 @@ func _ready():
 	_init_spawn()
 	print(get_child_count())
 	pass
-	
-func _process(delta):
-	var score = get_parent().score
-	var grid = score / 50
-	print(grid)
-	#spawn()
-
-
-func spawn():
-	var my_random_number = floor(rng.randf_range(0, 13))
-	var new_road = roads[my_random_number].instance()
-	new_road.translate(Vector3(0,-0.75,6.4))
-	add_child(new_road)
-
-	my_random_number = floor(rng.randf_range(0, 4))
-	var new_env1 = env[my_random_number].instance()
-	new_env1.translate(Vector3(6.4,-0.75,6.4))
-	add_child(new_env1)
-
-	my_random_number = floor(rng.randf_range(0, 4))
-	var new_env2 = env[my_random_number].instance()
-	new_env2.translate(Vector3(-6.4,-0.75,6.4))
-	add_child(new_env2)
-
 
 func _init_spawn():
-	for i in range(100):
+	for i in range(300):
 		var my_random_number = floor(rng.randf_range(0, 13))
 		var new_road = roads[my_random_number].instance()
 		new_road.translate(Vector3(0,-0.75,6.4*i))
