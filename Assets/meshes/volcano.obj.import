@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/volcano.obj-fa8c3b9cdfe28d0b2c8dcba78e0ccec3.mesh"
+
+[deps]
+
+files=[ "res://.import/volcano.obj-fa8c3b9cdfe28d0b2c8dcba78e0ccec3.mesh" ]
+
+source_file="res://Assets/meshes/volcano.obj"
+dest_files=[ "res://.import/volcano.obj-fa8c3b9cdfe28d0b2c8dcba78e0ccec3.mesh", "res://.import/volcano.obj-fa8c3b9cdfe28d0b2c8dcba78e0ccec3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

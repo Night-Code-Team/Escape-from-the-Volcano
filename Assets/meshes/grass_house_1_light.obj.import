@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grass_house_1_light.obj-444237ff588dc7a30b997b535ee8c729.mesh"
+
+[deps]
+
+files=[ "res://.import/grass_house_1_light.obj-444237ff588dc7a30b997b535ee8c729.mesh" ]
+
+source_file="res://Assets/meshes/grass_house_1_light.obj"
+dest_files=[ "res://.import/grass_house_1_light.obj-444237ff588dc7a30b997b535ee8c729.mesh", "res://.import/grass_house_1_light.obj-444237ff588dc7a30b997b535ee8c729.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -7,3 +7,11 @@ C:\Users\Александр\Desktop\Программирование\Godot\LD49\
 C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.csproj.CoreCompileInputs.cache
 C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.dll
 C:\Users\Александр\Desktop\Программирование\Godot\LD49\.mono\temp\obj\Debug\LD49.pdb
+G:\work\CODING\_Projects\LD49\.mono\temp\bin\Debug\LD49.dll
+G:\work\CODING\_Projects\LD49\.mono\temp\bin\Debug\LD49.pdb
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.csprojAssemblyReference.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfoInputs.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.AssemblyInfo.cs
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.csproj.CoreCompileInputs.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.dll
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\Debug\LD49.pdb

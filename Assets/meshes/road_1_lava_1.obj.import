@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_1_lava_1.obj-c024be7fc237f44fb305fde802acee59.mesh"
+
+[deps]
+
+files=[ "res://.import/road_1_lava_1.obj-c024be7fc237f44fb305fde802acee59.mesh" ]
+
+source_file="res://Assets/meshes/road_1_lava_1.obj"
+dest_files=[ "res://.import/road_1_lava_1.obj-c024be7fc237f44fb305fde802acee59.mesh", "res://.import/road_1_lava_1.obj-c024be7fc237f44fb305fde802acee59.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

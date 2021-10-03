@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Country_Light.obj-ccb1b77136da81311e7ef5a413e4dc30.mesh"
+
+[deps]
+
+files=[ "res://.import/Country_Light.obj-ccb1b77136da81311e7ef5a413e4dc30.mesh" ]
+
+source_file="res://Assets/meshes/Country_Light.obj"
+dest_files=[ "res://.import/Country_Light.obj-ccb1b77136da81311e7ef5a413e4dc30.mesh", "res://.import/Country_Light.obj-ccb1b77136da81311e7ef5a413e4dc30.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

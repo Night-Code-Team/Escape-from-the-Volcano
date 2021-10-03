@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_1_crack_1.obj-270d743f6d4f0a8baff9e797a52b8382.mesh"
+
+[deps]
+
+files=[ "res://.import/road_1_crack_1.obj-270d743f6d4f0a8baff9e797a52b8382.mesh" ]
+
+source_file="res://Assets/meshes/road_1_crack_1.obj"
+dest_files=[ "res://.import/road_1_crack_1.obj-270d743f6d4f0a8baff9e797a52b8382.mesh", "res://.import/road_1_crack_1.obj-270d743f6d4f0a8baff9e797a52b8382.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
