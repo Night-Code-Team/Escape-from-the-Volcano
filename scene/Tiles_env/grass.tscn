@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/textures/main_texture.tres" type="Material" id=1]
+[ext_resource path="res://Assets/meshes/grass.obj" type="ArrayMesh" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="grass" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )

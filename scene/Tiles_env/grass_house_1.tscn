@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/textures/main_emistion.tres" type="Material" id=1]
+[ext_resource path="res://Assets/textures/main_texture.tres" type="Material" id=2]
+[ext_resource path="res://Assets/meshes/grass_house_1.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Assets/meshes/grass_house_1_light.obj" type="ArrayMesh" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="grass_house_1" type="MeshInstance" parent="."]
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 2 )
+
+[node name="grass_house_1_light" type="MeshInstance" parent="grass_house_1"]
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 1 )
