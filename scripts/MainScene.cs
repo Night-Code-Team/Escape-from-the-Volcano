@@ -4,7 +4,7 @@ using System;
 public class MainScene : Spatial
 {
 	private int time = 0;
-	private int difficulty = 1;
+	private double difficulty = 0.2;
 	private float z_coord = -15.6F;
 	private string[] road_names = System.IO.Directory.GetFiles(@"scene/Tiles_road");
 	private string[] environment_names = System.IO.Directory.GetFiles(@"scene/Tiles_env");
