@@ -1,6 +1,2 @@
-<<<<<<< Updated upstream
-﻿52499
-=======
-﻿60244
->>>>>>> Stashed changes
-C:/files/Godot/Godot_v3.3.4-stable_mono_win64.exe
+﻿58801
+G:/prog/Godot/Godot_v3.3.3-stable_mono_win64.exe
