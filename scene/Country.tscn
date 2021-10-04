@@ -28,3 +28,31 @@ shape = SubResource( 1 )
 [node name="wall_2" type="CollisionShape" parent="Country/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10631e-07, 1.77781, 2.53095 )
 shape = SubResource( 1 )
+
+[node name="SpotLight" type="SpotLight" parent="Country/StaticBody"]
+transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -10.8895, 4.25, -0.350197 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
+[node name="SpotLight2" type="SpotLight" parent="Country/StaticBody"]
+transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -4.38946, 4.25, -0.350197 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
+[node name="SpotLight3" type="SpotLight" parent="Country/StaticBody"]
+transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, 2.11054, 4.25, -0.350197 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
+[node name="SpotLight4" type="SpotLight" parent="Country/StaticBody"]
+transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, 8.43089, 4.25, -0.350197 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174

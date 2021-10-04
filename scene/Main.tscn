@@ -132,9 +132,6 @@ material/0 = ExtResource( 12 )
 [node name="Spatial" parent="Main_world" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -52 )
 
-[node name="Camera" type="Camera" parent="Main_world/Spatial"]
-transform = Transform( 0.702245, 0.555259, -0.445578, 0.000615589, 0.625395, 0.780308, 0.711936, -0.548242, 0.438838, -10.8504, 13.2336, 12.3428 )
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 6 )
 
