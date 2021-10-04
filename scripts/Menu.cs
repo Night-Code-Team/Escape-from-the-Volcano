@@ -6,7 +6,6 @@ public class Menu : Control
 	private int difficulty = 1;
 	public void OnStartPressed()
 	{
-		(GetTree().Root.GetNode("Main") as MainScene).difficulty = Convert.ToDouble(difficulty) / 5;
 		GetTree().ChangeScene("res://scene/Main.tscn");
 	}
 	public void OnQuitPressed()
