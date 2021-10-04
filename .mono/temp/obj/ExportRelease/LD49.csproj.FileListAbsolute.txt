@@ -1,0 +1,8 @@
+G:\work\CODING\_Projects\LD49\.mono\temp\bin\ExportRelease\LD49.dll
+G:\work\CODING\_Projects\LD49\.mono\temp\bin\ExportRelease\LD49.pdb
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.csprojAssemblyReference.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.AssemblyInfoInputs.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.AssemblyInfo.cs
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.csproj.CoreCompileInputs.cache
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.dll
+G:\work\CODING\_Projects\LD49\.mono\temp\obj\ExportRelease\LD49.pdb
