@@ -25,6 +25,10 @@ public class MainScene : Spatial
 		{
 			AddNewTile();
 		}
+		if ((GetNode("Car") as KinematicBody).Translation.z - (GetNode("MainCamera") as KinematicBody).Translation.z <= -2.5)
+		{
+			GetTree().ChangeScene("res://scene/mainMenu.tscn");
+		}
 	}
 	private void AddNewTile()
 	{
