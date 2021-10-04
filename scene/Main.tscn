@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/Car.cs" type="Script" id=1]
 [ext_resource path="res://Assets/textures/car_1.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scene/Country.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/music/Maarten Schellekens - Before the Countdown.mp3" type="AudioStream" id=8]
 [ext_resource path="res://scene/AudioStreamPlayer3D.gd" type="Script" id=9]
+[ext_resource path="res://scene/world_env.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scripts/MainCamera.cs" type="Script" id=11]
 [ext_resource path="res://Assets/textures/main_texture.tres" type="Material" id=12]
 [ext_resource path="res://Assets/meshes/car_1.obj" type="ArrayMesh" id=34]
@@ -34,32 +35,6 @@ emission_texture = ExtResource( 3 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.127834, 0.13345, 0.191509 )
-
-[sub_resource type="ProceduralSky" id=5]
-sky_top_color = Color( 0.411765, 0.0431373, 0.192157, 1 )
-sky_horizon_color = Color( 0.596078, 0.2, 0.0470588, 1 )
-sky_curve = 0.0731027
-ground_bottom_color = Color( 0.0705882, 0.164706, 0.0431373, 1 )
-ground_horizon_color = Color( 0.215686, 0.160784, 0.0431373, 1 )
-ground_curve = 0.0800003
-sun_latitude = -162.65
-sun_curve = 1e-05
-texture_size = 0
-
-[sub_resource type="Environment" id=6]
-background_mode = 2
-background_sky = SubResource( 5 )
-background_color = Color( 0, 0.239216, 0.760784, 0.254902 )
-background_energy = 0.33
-ambient_light_color = Color( 1, 1, 1, 0 )
-ambient_light_energy = 0.02
-ambient_light_sky_contribution = 0.0
-fog_color = Color( 0.364706, 0.384314, 0.411765, 1 )
-fog_sun_color = Color( 0, 0, 0, 1 )
-fog_sun_amount = 1.0
-fog_depth_begin = 6.0
-fog_depth_end = 0.0
-fog_depth_curve = 0.417648
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -139,12 +114,11 @@ material/0 = ExtResource( 12 )
 [node name="Spatial" parent="Main_world" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -52 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 6 )
-
 [node name="Tile_gen" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.5217 )
 script = ExtResource( 37 )
 
 [node name="Spatial" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, -31.5 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 10 )]
