@@ -1,16 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Menu.cs" type="Script" id=1]
 [ext_resource path="res://Assets/menu/menu.png" type="Texture" id=2]
 [ext_resource path="res://Assets/menu/start_easy.png" type="Texture" id=3]
 [ext_resource path="res://Assets/menu/quit.png" type="Texture" id=4]
 [ext_resource path="res://Assets/menu/start_hard.png" type="Texture" id=5]
-[ext_resource path="res://Assets/menu/sound_hi.png" type="Texture" id=6]
-[ext_resource path="res://Assets/menu/sound_mid.png" type="Texture" id=7]
-[ext_resource path="res://Assets/menu/sound_off.png" type="Texture" id=8]
+[ext_resource path="res://fonts/SlideR.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/menu/hardmode.png" type="Texture" id=9]
-[ext_resource path="res://Assets/menu/sound_low.png" type="Texture" id=10]
 [ext_resource path="res://Assets/menu/start_normal.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [node name="mainMenu" type="Control"]
 anchor_right = 1.0
@@ -93,32 +96,21 @@ __meta__ = {
 position = Vector2( 90.3553, 21.0364 )
 texture = ExtResource( 9 )
 
-[node name="sound" type="Button" parent="Background"]
-margin_right = 59.0
-margin_bottom = 54.0
-flat = true
+[node name="Difficulty" type="Label" parent="."]
+anchor_left = 0.607
+anchor_top = 0.87
+anchor_right = 0.678
+anchor_bottom = 0.99
+margin_left = 0.431946
+margin_top = -6.10352e-05
+margin_right = -0.272034
+margin_bottom = -6.10352e-05
+custom_fonts/font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="sound_off" type="Sprite" parent="Background/sound"]
-visible = false
-position = Vector2( 90, 26.5 )
-texture = ExtResource( 8 )
-
-[node name="sound_hi" type="Sprite" parent="Background/sound"]
-visible = false
-position = Vector2( 90.125, 26.75 )
-texture = ExtResource( 6 )
-
-[node name="sound_mid" type="Sprite" parent="Background/sound"]
-position = Vector2( 90.5, 26.5 )
-texture = ExtResource( 7 )
-
-[node name="sound_low" type="Sprite" parent="Background/sound"]
-visible = false
-position = Vector2( 90.5, 26.75 )
-texture = ExtResource( 10 )
-
 [connection signal="pressed" from="Background/Start" to="." method="OnStartPressed"]
 [connection signal="pressed" from="Background/Quit" to="." method="OnQuitPressed"]
+[connection signal="pressed" from="Background/hardmodeP" to="." method="OnHardPPressed"]
+[connection signal="pressed" from="Background/hardmodeP/hardmodeM" to="." method="OnHardMPressed"]

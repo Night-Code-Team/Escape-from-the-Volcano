@@ -4,7 +4,7 @@ using System;
 public class MainScene : Spatial
 {
 	private int time = 0;
-	private double difficulty = 0.2;
+	public double difficulty { get; set; }
 	private float z_coord = -15.6F;
 	private string[] road_names = System.IO.Directory.GetFiles(@"scene/Tiles_road");
 	private string[] environment_names = System.IO.Directory.GetFiles(@"scene/Tiles_env");
@@ -21,7 +21,7 @@ public class MainScene : Spatial
 	public override void _Process(float delta)
 	{
 		time++;
-		if (time % (64 / (time/ 100 + 5)) == 0)
+		if (time % 5 == 0)
 		{
 			AddNewTile();
 		}
