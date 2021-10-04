@@ -48,7 +48,6 @@ var env = [
 
 func _ready():
 	rng.randomize()
-	_init_spawn()
 	print(get_child_count())
 	pass
 

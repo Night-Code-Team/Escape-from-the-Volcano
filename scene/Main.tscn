@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://scripts/Car.cs" type="Script" id=1]
 [ext_resource path="res://Assets/textures/car_1.png" type="Texture" id=2]
@@ -36,7 +36,6 @@
 [ext_resource path="res://Assets/meshes/car_1.obj" type="ArrayMesh" id=34]
 [ext_resource path="res://Assets/meshes/car_1_light.obj" type="ArrayMesh" id=35]
 [ext_resource path="res://Assets/textures/meteor.png" type="Texture" id=36]
-[ext_resource path="res://scripts/tile_gen.gd" type="Script" id=37]
 [ext_resource path="res://scene/Label.gd" type="Script" id=38]
 
 [sub_resource type="BoxShape" id=1]
@@ -186,29 +185,29 @@ shape = SubResource( 4 )
 [node name="Camera" type="Camera" parent="MainCamera/CollisionShape"]
 transform = Transform( -0.173648, 0.696365, -0.696365, 3.09086e-08, 0.707107, 0.707107, 0.984808, 0.122788, -0.122788, -0.249998, -0.5, -0.433014 )
 
-[node name="Tiles_enviroment" type="Spatial" parent="."]
+[node name="Tiles_Environment" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
 
-[node name="grass" type="MeshInstance" parent="Tiles_enviroment"]
+[node name="grass" type="MeshInstance" parent="Tiles_Environment"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 12 )
 
-[node name="grass_hole_1" type="MeshInstance" parent="Tiles_enviroment"]
+[node name="grass_hole_1" type="MeshInstance" parent="Tiles_Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.75 )
 mesh = ExtResource( 6 )
 material/0 = ExtResource( 12 )
 
-[node name="grass_house_1" type="MeshInstance" parent="Tiles_enviroment"]
+[node name="grass_house_1" type="MeshInstance" parent="Tiles_Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.5 )
 mesh = ExtResource( 27 )
 material/0 = ExtResource( 12 )
 
-[node name="grass_house_1_light" type="MeshInstance" parent="Tiles_enviroment/grass_house_1"]
+[node name="grass_house_1_light" type="MeshInstance" parent="Tiles_Environment/grass_house_1"]
 mesh = ExtResource( 31 )
 material/0 = ExtResource( 28 )
 
-[node name="grass_woods_1" type="MeshInstance" parent="Tiles_enviroment"]
+[node name="grass_woods_1" type="MeshInstance" parent="Tiles_Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.25 )
 mesh = ExtResource( 10 )
 material/0 = ExtResource( 12 )
@@ -633,33 +632,82 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 8
 mesh = ExtResource( 24 )
 material/0 = ExtResource( 12 )
 
+[node name="border" type="StaticBody" parent="Tiles_Road/road_3"]
+
+[node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_3/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
+shape = SubResource( 5 )
+
+[node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_3/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
+shape = SubResource( 6 )
+
+[node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_3/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
+shape = SubResource( 6 )
+
+[node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_3/border"]
+transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
 [node name="road_3_crack_1" type="MeshInstance" parent="Tiles_Road"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 87.75 )
 mesh = ExtResource( 20 )
 material/0 = ExtResource( 12 )
 
-[node name="Main_world" type="Spatial" parent="."]
+[node name="border" type="StaticBody" parent="Tiles_Road/road_3_crack_1"]
+
+[node name="road_light_collition" type="CollisionShape" parent="Tiles_Road/road_3_crack_1/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
+shape = SubResource( 5 )
+
+[node name="wall_1" type="CollisionShape" parent="Tiles_Road/road_3_crack_1/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
+shape = SubResource( 6 )
+
+[node name="wall_2" type="CollisionShape" parent="Tiles_Road/road_3_crack_1/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
+shape = SubResource( 6 )
+
+[node name="SpotLight2" type="SpotLight" parent="Tiles_Road/road_3_crack_1/border"]
+transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
+[node name="SpotLight" type="SpotLight" parent="Tiles_Road/road_3_crack_1/border"]
+transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, -1.63172 )
+light_color = Color( 1, 0.898039, 0.435294, 1 )
+spot_range = 5.22424
+spot_attenuation = 0.0544095
+spot_angle = 31.8174
+
+[node name="Main_World" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.742743, -31.514 )
 
-[node name="Country" type="MeshInstance" parent="Main_world"]
+[node name="Country" type="MeshInstance" parent="Main_World"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 mesh = ExtResource( 26 )
 material/0 = ExtResource( 12 )
 
-[node name="Country_Light" type="MeshInstance" parent="Main_world/Country"]
+[node name="Country_Light" type="MeshInstance" parent="Main_World/Country"]
 mesh = ExtResource( 29 )
 material/0 = ExtResource( 28 )
 
-[node name="volcano" type="MeshInstance" parent="Main_world"]
+[node name="volcano" type="MeshInstance" parent="Main_World"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76837e-07, 0, -51.1784 )
 mesh = ExtResource( 25 )
 material/0 = ExtResource( 12 )
 
-[node name="vulcano_Light" type="MeshInstance" parent="Main_world/volcano"]
+[node name="vulcano_Light" type="MeshInstance" parent="Main_World/volcano"]
 mesh = ExtResource( 30 )
 material/0 = ExtResource( 28 )
 
-[node name="volcano_light" type="OmniLight" parent="Main_world/volcano/vulcano_Light"]
+[node name="volcano_light" type="OmniLight" parent="Main_World/volcano/vulcano_Light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0 )
 light_color = Color( 1, 0.607843, 0, 1 )
 light_energy = 3.26
@@ -668,56 +716,56 @@ shadow_enabled = true
 omni_range = 16.25
 omni_attenuation = 1.93188
 
-[node name="lava_lake" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, -5.25, 9.5 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 3.0
 
-[node name="lava_lake2" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake2" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -5.5, 5.75 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 2.25
 
-[node name="lava_lake3" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake3" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.25, -5.5, -2.5 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 1.5
 
-[node name="lava_lake4" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake4" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, -5.25, -9.75 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 2.75
 
-[node name="lava_lake5" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake5" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -4.75, -10.75 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 2.5
 
-[node name="lava_lake6" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake6" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -4.75, 6 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 2.5
 
-[node name="lava_lake7" type="OmniLight" parent="Main_world/volcano/vulcano_Light/volcano_light"]
+[node name="lava_lake7" type="OmniLight" parent="Main_World/volcano/vulcano_Light/volcano_light"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, -5.5, -9.25 )
 light_color = Color( 1, 0.678431, 0, 1 )
 light_energy = 2.78
 shadow_enabled = true
 omni_range = 2.5
 
-[node name="smoke" type="CPUParticles" parent="Main_world/volcano"]
+[node name="smoke" type="CPUParticles" parent="Main_World/volcano"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, 0 )
 amount = 20
 lifetime = 3.0
@@ -730,23 +778,23 @@ gravity = Vector3( 0, 1, 0 )
 color_ramp = SubResource( 17 )
 hue_variation = 0.04
 
-[node name="forest" type="MeshInstance" parent="Main_world"]
+[node name="forest" type="MeshInstance" parent="Main_World"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -25.6011 )
 visible = false
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 12 )
 
-[node name="Camera" type="Camera" parent="Main_world"]
+[node name="Camera" type="Camera" parent="Main_World"]
 transform = Transform( 0.702245, 0.555259, -0.445578, 0.000615589, 0.625395, 0.780309, 0.711936, -0.548242, 0.438838, -10.8504, 13.2336, -39.6572 )
 
-[node name="Control" type="Control" parent="Main_world/Camera"]
+[node name="Control" type="Control" parent="Main_World/Camera"]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Main_world/Camera/Control"]
+[node name="Label" type="Label" parent="Main_World/Camera/Control"]
 anchor_left = 1.52207
 anchor_top = 0.603333
 anchor_right = 8.125
@@ -762,6 +810,5 @@ __meta__ = {
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 19 )
 
-[node name="Tile_gen" type="Spatial" parent="."]
+[node name="Tile_Gen" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.5217 )
-script = ExtResource( 37 )
