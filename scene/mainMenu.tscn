@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scene/menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Menu.cs" type="Script" id=1]
 
 [node name="mainMenu" type="Control"]
 anchor_right = 1.0
@@ -60,5 +60,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Panel/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="Panel/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Panel/Start" to="." method="OnStartPressed"]
+[connection signal="pressed" from="Panel/Quit" to="." method="OnQuitPressed"]
