@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/textures/main_texture.tres" type="Material" id=1]
 [ext_resource path="res://Assets/meshes/road_1.obj" type="ArrayMesh" id=2]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.0639769, 0.608896, 0.0835978 )
-
-[sub_resource type="BoxShape" id=2]
 extents = Vector3( 3.15834, 1, 0.126946 )
 
 [node name="Spatial" type="Spatial"]
@@ -18,21 +15,17 @@ material/0 = ExtResource( 1 )
 
 [node name="border" type="StaticBody" parent="road_1"]
 
-[node name="road_light_collition" type="CollisionShape" parent="road_1/border"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -2.6434 )
-shape = SubResource( 1 )
-
-[node name="wall_1" type="CollisionShape" parent="road_1/border"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 2 )
-
-[node name="wall_2" type="CollisionShape" parent="road_1/border"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 2 )
-
 [node name="SpotLight" type="SpotLight" parent="road_1/border"]
 transform = Transform( 1, -4.35938e-08, -4.69143e-08, 4.35939e-08, -0.0732731, 0.997312, -4.69142e-08, -0.997312, -0.0732731, -1.13946, 4.25, -0.350197 )
 light_color = Color( 1, 0.898039, 0.435294, 1 )
 spot_range = 5.22424
 spot_attenuation = 0.0544095
 spot_angle = 31.8174
+
+[node name="wall_1" type="CollisionShape" parent="road_1/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1062e-07, 1.77781, -2.53068 )
+shape = SubResource( 1 )
+
+[node name="wall_2" type="CollisionShape" parent="road_1/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10631e-07, 1.77781, 2.53095 )
+shape = SubResource( 1 )

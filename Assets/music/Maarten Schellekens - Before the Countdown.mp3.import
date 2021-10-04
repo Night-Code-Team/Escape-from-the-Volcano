@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Maarten Schellekens - Before the Countdown.mp3-3004f9239031a783fcc626793e34db0c.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/Maarten Schellekens - Before the Countdown.mp3"
+dest_files=[ "res://.import/Maarten Schellekens - Before the Countdown.mp3-3004f9239031a783fcc626793e34db0c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
