@@ -21,7 +21,7 @@ public class MainScene : Spatial
 	public override void _Process(float delta)
 	{
 		time++;
-		if (time % (64 / (time * difficulty / 100 + 5)) == 0)
+		if (time % (64 / (time/ 100 + 5)) == 0)
 		{
 			AddNewTile();
 		}
