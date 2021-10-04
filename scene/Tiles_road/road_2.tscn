@@ -22,14 +22,6 @@ material/0 = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16198, 1.38301, -0.040082 )
 shape = SubResource( 1 )
 
-[node name="wall_1" type="CollisionShape" parent="road_2/border"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33509e-07, 1.77781, -3.05433 )
-shape = SubResource( 2 )
-
-[node name="wall_2" type="CollisionShape" parent="road_2/border"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3406e-07, 1.77781, 3.06694 )
-shape = SubResource( 2 )
-
 [node name="SpotLight2" type="SpotLight" parent="road_2/border"]
 transform = Transform( 1, -4.37106e-08, -4.34566e-08, 4.37106e-08, 0.00582928, 0.999983, -4.34565e-08, -0.999983, 0.00582928, -1.16879, 4.25, 1.53912 )
 light_color = Color( 1, 0.898039, 0.435294, 1 )
@@ -43,3 +35,11 @@ light_color = Color( 1, 0.898039, 0.435294, 1 )
 spot_range = 5.22424
 spot_attenuation = 0.0544095
 spot_angle = 31.8174
+
+[node name="wall_1" type="CollisionShape" parent="road_2/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1062e-07, 1.77781, -2.53068 )
+shape = SubResource( 2 )
+
+[node name="wall_2" type="CollisionShape" parent="road_2/border"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10631e-07, 1.77781, 2.53095 )
+shape = SubResource( 2 )
